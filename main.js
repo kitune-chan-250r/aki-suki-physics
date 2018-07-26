@@ -35,16 +35,31 @@ function random_int(min, max){
     return random;
 }
 
+function sleep(waitMsec) {
+    const d1 = new Date();
+    while (true) {
+        const d2 = new Date();
+        if (d2 - d1 > waitMsec) {
+            break;
+            }
+    }
+ 
+}
+
+
+function add_obj(){
+    var obj = Bodies.rectangle(700 + random_int(-600,600), 0 + random_int(0,100), 60,20, {restitution: 0.5,
+                                                                                        render:{sprite:
+                                                                                        {texture: "./akisuki.png",
+                                                                                        xScale: 0.06,
+                                                                                        yScale: 0.06}}});
+    //{density:0.0005,render:{sprite:{texture: "./131.jpg"}}}
+    World.add(world,[obj]);
+}
+
 var count = 400;
 for(var i = 0;i < count; i++){
-    var obj = Bodies.circle(700 + random_int(-600,600), 0 + random_int(0,100), 20, {density:0.05, 
-                                                                                    restitution: 1,
-                                                                                    render:{sprite:
-                                                                                    {texture: "./akisuki.png",
-                                                                                    xScale: 0.06,
-                                                                                    yScale: 0.06}}});
-    //{density:0.0005,render:{sprite:{texture: "./131.jpg"}}}
-    World.add(engine.world,[obj]);
+    add_obj();
 }
 
 
