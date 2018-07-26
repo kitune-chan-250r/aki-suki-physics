@@ -48,11 +48,12 @@ function sleep(waitMsec) {
 
 
 function add_obj(){
-    var obj = Bodies.rectangle(700 + random_int(-600,600), 0 + random_int(0,100), 60,20, {restitution: 0.5,
+    var obj = Bodies.circle(700 + random_int(-600,600), 0 + random_int(0,100), 20, {density: 0.0005,
+                                                                                        restitution: 0.6,
                                                                                         render:{sprite:
                                                                                         {texture: "./akisuki.png",
-                                                                                        xScale: 0.06,
-                                                                                        yScale: 0.06}}});
+                                                                                        xScale: 0.07,
+                                                                                        yScale: 0.07}}});
     //{density:0.0005,render:{sprite:{texture: "./131.jpg"}}}
     World.add(world,[obj]);
 }
