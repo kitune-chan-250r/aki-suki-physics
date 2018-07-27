@@ -52,12 +52,12 @@ function sleep(waitMsec) {
 var bodies = [];
 
 function add_obj(){
-    var obj = Bodies.circle(700 + random_int(-600,600), -1000 + random_int(0,100), 16, {density: 0.005,
-                                                                                        restitution: 1,
+    var obj = Bodies.circle(700 + random_int(-600,600), -1000 + random_int(0,100), 16, {density: 0.1,
+                                                                                        restitution: 0.99,
                                                                                         render:{sprite:
                                                                                         {texture: "./akisuki.png",
-                                                                                        xScale: 0.07,
-                                                                                        yScale: 0.07}}});
+                                                                                        xScale: 0.09,
+                                                                                        yScale: 0.09}}});
     //{density:0.0005,render:{sprite:{texture: "./131.jpg"}}}
     var test_obj = Bodies.rectangle(700 + random_int(-600,600), 0 + random_int(0,100), 40, 70,{ chamfer: 10 });
     
